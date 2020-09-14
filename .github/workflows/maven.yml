@@ -1,7 +1,10 @@
 name: Publish package to the Maven Central Repository
 on:
-  release:
-    types: [published]
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
